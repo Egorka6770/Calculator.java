@@ -93,11 +93,11 @@ public class Calculator {
         while (elem2.indexOf("*") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("*")) {
-                    double sum = Double.valueOf(elem2.get(z - 1)) * Double.valueOf(elem2.get(z + 1));
+                    Multiplication sum = new Multiplication(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
-                    elem2.add(z - 1, String.valueOf(sum));
+                    elem2.add(z - 1, String.valueOf(sum.getresult()));
 
                 }
             }
@@ -105,7 +105,7 @@ public class Calculator {
         while (elem2.indexOf("+") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("+")) {
-                    Addition sum = new Addition(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1))); /*Double.valueOf(elem2.get(z - 1)) + Double.valueOf(elem2.get(z + 1));*/
+                    Addition sum = new Addition(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
