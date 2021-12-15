@@ -6,5 +6,4 @@ public abstract class Operation {
     public double getresult() {
         return result;
     }
-
 }

@@ -24,14 +24,12 @@ public class Calculator {
                                 str += elem.get(x + 1);
                                 str += " ";
                                 elem.remove(x);
-
                                 x2 = x;
                             }
                             elem.remove(x);
                             elem.remove(x);
                             elem.add(x2, String.valueOf(operacion(str)));
                             str = "";
-
                         }
                     }
                 }
@@ -63,7 +61,6 @@ public class Calculator {
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.add(z - 1, String.valueOf(sum));
-
                 }
             }
         }
@@ -74,7 +71,6 @@ public class Calculator {
                     elem2.remove(z);
                     elem2.remove(z);
                     elem2.add(z, String.valueOf(sum));
-
                 }
             }
         }
@@ -86,7 +82,6 @@ public class Calculator {
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.add(z - 1, String.valueOf(sum.getresult()));
-
                 }
             }
         }
@@ -98,7 +93,6 @@ public class Calculator {
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.add(z - 1, String.valueOf(sum.getresult()));
-
                 }
             }
         }
@@ -127,5 +121,4 @@ public class Calculator {
         }
         return elem2.get(0);
     }
-
 }
