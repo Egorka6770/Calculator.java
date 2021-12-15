@@ -81,7 +81,7 @@ public class Calculator {
         while (elem2.indexOf("/") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("/")) {
-                    Split sum = new Split(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
+                    Division sum = new Division(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
@@ -105,7 +105,7 @@ public class Calculator {
         while (elem2.indexOf("+") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("+")) {
-                    Plus sum = new Plus(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1))); /*Double.valueOf(elem2.get(z - 1)) + Double.valueOf(elem2.get(z + 1));*/
+                    Addition sum = new Addition(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1))); /*Double.valueOf(elem2.get(z - 1)) + Double.valueOf(elem2.get(z + 1));*/
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
