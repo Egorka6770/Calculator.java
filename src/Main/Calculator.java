@@ -13,17 +13,9 @@ public class Calculator {
             elem.add(listElement);
         }
 
-        for (int i = 0; i < elem.size(); i++) {
-            System.out.print(elem.get(i));
-        }
-        System.out.println(" ");
 
         while (elem.indexOf("(") != -1) {
 
-            for (int i = 0; i < elem.size(); i++) {
-                System.out.print(elem.get(i));
-            }
-            System.out.println(" ");
             for (x = elem.size() - 1; x >= 0; x--) {
                 if (elem.get(x).equals("(")) {
                     for (y = x; y < elem.size(); y++) {
@@ -50,10 +42,8 @@ public class Calculator {
             str = "";
             for (int i = 0; i < elem.size(); i++) {
                 str += elem.get(i);
-                System.out.print(elem.get(i));
                 str += " ";
             }
-            System.out.println(" ");
             elem.add(0, operacion(str));
         }
 
@@ -91,17 +81,11 @@ public class Calculator {
         while (elem2.indexOf("/") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("/")) {
-                    /*if (Double.valueOf(elem2.get(z + 1)) == 0) {
-                        System.out.println("В знаменателе 0");
-                        System.exit(0);
-
-
-                    } else {*/
-                        Split sum = new Split(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
-                        elem2.remove(z - 1);
-                        elem2.remove(z - 1);
-                        elem2.remove(z - 1);
-                        elem2.add(z - 1, String.valueOf(sum.getsum()));
+                    Split sum = new Split(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
+                    elem2.remove(z - 1);
+                    elem2.remove(z - 1);
+                    elem2.remove(z - 1);
+                    elem2.add(z - 1, String.valueOf(sum.getresult()));
 
                 }
             }
@@ -125,7 +109,7 @@ public class Calculator {
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
-                    elem2.add(z - 1, String.valueOf(sum.getsum()));
+                    elem2.add(z - 1, String.valueOf(sum.getresult()));
 
                 }
             }

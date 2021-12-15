@@ -1,13 +1,10 @@
 package Main;
 
 public abstract class Operation {
-    double a, b, sum;
+    double result;
 
-    Operation(double a, double b) {
-
-    }
-    public double getsum() {
-        return sum;
+    public double getresult() {
+        return result;
     }
 
 }
