@@ -56,11 +56,11 @@ public class Calculator {
         while (elem2.indexOf("^") != -1) {
             for (int z = elem2.size() - 1; z >= 0; z--) {
                 if (elem2.get(z).equals("^")) {
-                    double sum = Math.pow(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
+                    Pow sum = new Pow(Double.valueOf(elem2.get(z - 1)), Double.valueOf(elem2.get(z + 1)));
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
                     elem2.remove(z - 1);
-                    elem2.add(z - 1, String.valueOf(sum));
+                    elem2.add(z - 1, String.valueOf(sum.getresult()));
                 }
             }
         }
