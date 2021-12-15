@@ -1,7 +1,7 @@
 package Main;
 
-public class Split extends Operation {
-    Split(double a, double b) {
+public class Division extends Operation {
+    Division(double a, double b) {
 
         try {
             if (b == 0.0) {
