@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         double x;
-        String primer = "0 ^ 10";
+        String primer = "2 + 3 / ( 0 )";
         Calculator calc = new Calculator();
         x = calc.rechenie(primer);
-        System.out.println(x);
+        System.out.print(x);
     }
 }

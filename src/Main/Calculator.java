@@ -13,9 +13,7 @@ public class Calculator {
             elem.add(listElement);
         }
 
-
         while (elem.indexOf("(") != -1) {
-
             for (x = elem.size() - 1; x >= 0; x--) {
                 if (elem.get(x).equals("(")) {
                     for (y = x; y < elem.size(); y++) {
@@ -44,7 +42,6 @@ public class Calculator {
             }
             elem.add(0, operacion(str));
         }
-
         return Double.valueOf(elem.get(0));
     }
 
@@ -64,6 +61,7 @@ public class Calculator {
                 }
             }
         }
+
         while (elem2.indexOf("sqrt") != -1) {
             for (int z = elem2.size() - 1; z >= 0; z--) {
                 if (elem2.get(z).equals("sqrt")) {
@@ -74,6 +72,7 @@ public class Calculator {
                 }
             }
         }
+
         while (elem2.indexOf("/") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("/")) {
@@ -85,6 +84,7 @@ public class Calculator {
                 }
             }
         }
+
         while (elem2.indexOf("*") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("*")) {
@@ -108,6 +108,7 @@ public class Calculator {
                 }
             }
         }
+
         while (elem2.indexOf("-") != -1) {
             for (int z = 0; z <= elem2.size() - 1; z++) {
                 if (elem2.get(z).equals("-")) {
