@@ -12,6 +12,8 @@ public class Main {
         primer = scanner.nextLine();
         Calculator calc = new Calculator();
         x = calc.rechenie(primer);
+        System.out.print("Ответ: ");
         System.out.print(x);
+        scanner.nextLine();
     }
 }
