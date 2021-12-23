@@ -35,6 +35,8 @@ public class Calculator {
             }
         } else {
             System.out.print("Пример введён не корректно.");
+            Scanner s = new Scanner(System.in);
+            s.nextLine();
             System.exit(0);
         }
 
