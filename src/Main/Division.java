@@ -10,6 +10,11 @@ public class Division extends Operation {
             }
         } catch (ArithmeticException e) {
             System.err.print(e.getMessage());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
             System.exit(0);
         }
     }
