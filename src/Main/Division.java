@@ -6,7 +6,7 @@ public class Division extends Operation {
             if (b == 0.0) {
                 throw new ArithmeticException("Деление на 0");
             } else {
-                result = a / b;
+                setresult(a / b);
             }
         } catch (ArithmeticException e) {
             System.err.print(e.getMessage());
