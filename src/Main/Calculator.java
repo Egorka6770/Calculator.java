@@ -12,26 +12,30 @@ public class Calculator {
         for (String listElement : ur.split(" ")) {
             elem.add(listElement);
         }
-
-        while (elem.indexOf("(") != -1) {
-            for (x = elem.size() - 1; x >= 0; x--) {
-                if (elem.get(x).equals("(")) {
-                    for (y = x; y < elem.size(); y++) {
-                        if (elem.get(y).equals(")")) {
-                            for (int i = x + 1; i <= y - 1; i++) {
-                                str += elem.get(x + 1);
-                                str += " ";
+        if (elem.contains("(") == elem.contains(")")) {
+            while (elem.indexOf("(") != -1) {
+                for (x = elem.size() - 1; x >= 0; x--) {
+                    if (elem.get(x).equals("(")) {
+                        for (y = x; y < elem.size(); y++) {
+                            if (elem.get(y).equals(")")) {
+                                for (int i = x + 1; i <= y - 1; i++) {
+                                    str += elem.get(x + 1);
+                                    str += " ";
+                                    elem.remove(x);
+                                    x2 = x;
+                                }
                                 elem.remove(x);
-                                x2 = x;
+                                elem.remove(x);
+                                elem.add(x2, String.valueOf(operacion(str)));
+                                str = "";
                             }
-                            elem.remove(x);
-                            elem.remove(x);
-                            elem.add(x2, String.valueOf(operacion(str)));
-                            str = "";
                         }
                     }
                 }
             }
+        } else {
+            System.out.print("Пример введён не корректно.");
+            System.exit(0);
         }
 
         if (elem.size() != 1) {

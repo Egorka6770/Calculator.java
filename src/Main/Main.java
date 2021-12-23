@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         double x;
         String primer;
         System.out.println("Введите пример:");
@@ -15,6 +15,5 @@ public class Main {
         System.out.print("Ответ: ");
         System.out.print(x);
         scanner.nextLine();
-        Thread.sleep(2000);
     }
 }
