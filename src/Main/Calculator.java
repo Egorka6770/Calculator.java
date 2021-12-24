@@ -4,10 +4,9 @@ import java.util.*;
 
 public class Calculator {
     private String str = "";
-    private int x, y, x2;
+    private int x, y;
 
     public double rechenie(String ur) {
-        str = "";
         List<String> elem = new ArrayList<String>();
         for (String listElement : ur.split(" ")) {
             elem.add(listElement);
@@ -22,11 +21,10 @@ public class Calculator {
                                     str += elem.get(x + 1);
                                     str += " ";
                                     elem.remove(x);
-                                    x2 = x;
                                 }
                                 elem.remove(x);
                                 elem.remove(x);
-                                elem.add(x2, String.valueOf(operacion(str)));
+                                elem.add(x, String.valueOf(operacion(str)));
                                 str = "";
                             }
                         }
@@ -34,7 +32,7 @@ public class Calculator {
                 }
             }
         } else {
-            System.out.print("Пример введён не корректно.");
+            System.out.print("Пример введён не корректно. Проверьте скобки.");
             Scanner s = new Scanner(System.in);
             s.nextLine();
             System.exit(0);
