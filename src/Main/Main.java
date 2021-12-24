@@ -6,14 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
         double x;
-        String primer;
-        System.out.println("Введите пример:");
+        String primer, answer;
+        boolean c = true;
         Scanner scanner = new Scanner(System.in);
-        primer = scanner.nextLine();
-        Calculator calc = new Calculator();
-        x = calc.rechenie(primer);
-        System.out.print("Ответ: ");
-        System.out.print(x);
-        scanner.nextLine();
+        while (c) {
+            System.out.println("Введите пример:");
+
+            primer = scanner.nextLine();
+            Calculator calc = new Calculator();
+            x = calc.rechenie(primer);
+            System.out.print("Ответ: ");
+            System.out.println(x);
+            System.out.println("Желаете продолжить? ");
+            answer = scanner.nextLine();
+            if (!answer.equals("Да")) {
+                c = false;
+            }
+        }
+
     }
 }
