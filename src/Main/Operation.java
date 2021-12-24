@@ -6,7 +6,8 @@ public abstract class Operation {
     public double getresult() {
         return result;
     }
-    public void setresult(double result){
-        this.result=result;
+
+    public void setresult(double result) {
+        this.result = result;
     }
 }
